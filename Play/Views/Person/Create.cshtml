@@ -1,0 +1,21 @@
+﻿@model Play.Models.Person
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using(Html.BeginForm("Create", "Person", FormMethod.Post)){
+<div>
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+
+    @Html.LabelFor(m => m.EmailAddress)
+    @Html.TextBoxFor(m => m.EmailAddress)
+    @Html.ValidationMessageFor(m => m.EmailAddress)
+
+    <input type="submit" value="Register" id="btn1" />
+
+</div>
+}

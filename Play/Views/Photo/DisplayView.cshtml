@@ -1,0 +1,16 @@
+﻿@model Play.Models.Photo
+
+@{
+    ViewBag.Title = "DisplayView";
+}
+
+<h2>DisplayView</h2>
+
+<div id="photo-title">
+    @Model.Title
+</div>
+<div>
+    @Html.LabelFor(m => m.CreatedDate)
+    @Html.TextBoxFor(m => m.CreatedDate)
+    @Html.ValidationMessageFor(m => m.CreatedDate)
+</div>
