@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Play.Models.Photo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Play.Resources.Site.Index</h2>
+
+@foreach (var item in Model)
+{ 
+    <span>@item.Title</span>
+}

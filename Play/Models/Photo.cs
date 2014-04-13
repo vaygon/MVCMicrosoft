@@ -14,9 +14,9 @@ namespace Play.Models
         public byte[] PhotoFile { get; set; }
         public string Description { get; set; }
        
-        [DisplayName("Created Date")]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:MM/dd/yy}", ApplyFormatInEditMode=true)]
+        //[DisplayName("Created Date")]
+        //[DataType(DataType.DateTime)]
+        //[DisplayFormat(DataFormatString = "{0:MM/dd/yy}", ApplyFormatInEditMode=true)]
         public DateTime CreatedDate { get; set; }
         public string Owner { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }        

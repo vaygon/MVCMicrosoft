@@ -1,0 +1,33 @@
+﻿@model Play.Models.Photo
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{ 
+    <p>@ViewBag.Message</p>
+}
+
+@using (Html.BeginForm("Create", "Photo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.LabelFor(m => m.Title);
+    @Html.TextBoxFor(m => m.Title);
+
+    @Html.LabelFor(m => m.Description);
+    @Html.TextBoxFor(m => m.Description);
+
+    @Html.LabelFor(m => m.CreatedDate);
+    @Html.TextBoxFor(m => m.CreatedDate);
+
+    @Html.LabelFor(m => m.Owner);
+    @Html.TextBoxFor(m => m.Owner);
+
+    @Html.LabelFor(m => m.PhotoFile);
+    <input type="file" name="file" id="file" />
+    
+    <input type="submit" value="Save" />
+        
+}
